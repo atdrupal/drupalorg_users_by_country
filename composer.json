@@ -1,0 +1,6 @@
+{
+    "require": {
+        "behat/mink": "1.4@stable",
+        "behat/mink-selenium2-driver": "*"
+    }
+}
