@@ -2,5 +2,10 @@
     "require": {
         "behat/mink": "1.4@stable",
         "behat/mink-selenium2-driver": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "AndyTruong\\DrupalOrgScan\\": "src/"
+        }
     }
 }

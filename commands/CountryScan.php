@@ -5,7 +5,7 @@ use Behat\Mink\Element\NodeElement;
 use Behat\Mink\Session;
 
 require_once 'vendor/autoload.php';
-$conf = require __DIR__ . '/config.php';
+$conf = require __DIR__ . '/../config.php';
 
 $driver = new Selenium2Driver(
     'firefox', 'https://www.drupal.org/'
@@ -38,7 +38,7 @@ for ($page = 0; $page <= $total; ++$page) {
     foreach ($session->getPage()->findAll('css', 'a.username') as $element) {
         /* @var $element NodeElement */
         $uri = \str_replace('https://www.drupal.org', '', $element->getAttribute('href'));
-        exec("echo '{$uri}'  >> " . __DIR__ . "/users.txt");
+        exec("echo '{$uri}'  >> " . __DIR__ . "/../files/users.txt");
     }
 }
 
